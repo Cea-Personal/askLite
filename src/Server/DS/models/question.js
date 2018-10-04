@@ -11,28 +11,32 @@ const questions =[
         tags:[tags[1],tags[2],tags[4]],
         category:category[1],
         created:date.toDateString(),
-        answers:[{
-            id:1,
+        answers:[
+            {
+            ansid:1,
             author : user[3].userName,
             description :'well i know that is possible to implement modular css with webpack and vanilla javascript but without webpack, i only know of using BEM approach',
             created:date.toDateString(),
-            updated:date.toDateString(),
-            comments:[{
-                id:1,
+            comments:[
+                {
+                commid:1,
                 author:user[1].name,
                 description:'Yes you can',
                 created:date.toDateString(),
-                updated:date.toDateString(),
-
-            }]
+            }],
+            upvotes:6,
+            downvotes: 10,
+            prefered:'No'
         },
         {
-            id:2,
+            ansid:2,
             author : user[4].userName,
             description :'it is possible',
             created:date.toDateString(),
-            updated:date.toDateString(),
             comments:[{}],
+            upvotes:38,
+            downvotes: 2,
+            prefered:'Yes'
 
         }]
     },
@@ -44,7 +48,10 @@ const questions =[
         tags:[tags[3],tags[5],tags[6]],
         category:category[7],
         created:date.toDateString(),
-        answers:[{}]
+        answers:[{}],
+        upvotes:60,
+        downvotes: 2,
+        prefered:'Yes'
     },
     {
         id:3,
@@ -55,12 +62,14 @@ const questions =[
         category:category[8],
         created:date.toDateString(),
         answers:[{
-            id:1,
+            ansid:1,
             author : user[2].userName,
             description :"You can always give back to the community whether youre a GDE or not. Becoming a GDE is by nomination from other GDE's",
             created:date.toDateString(),
-            updated:date.toDateString(),
             comments:[{}],
+            upvotes:60,
+            downvotes:52,
+            prefered:'No'
         }]
     },
     {
@@ -72,26 +81,26 @@ const questions =[
         category:category[4],
         created:date.toDateString(),
         answers:[{
-            id:1,
+            ansid:1,
             author :user[3].userName,
             description :'it is possible to build PWA with react',
             created:date.toDateString(),
-            updated:date.toDateString(),
             comments:[{
-                id:1,
+                commid:1,
                 author:user[2].userName,
                 description:'Thanks, i will google the rest out',
                 created:date.toDateString(),
-                updated:date.toDateString(),
 
-            }]
+            }],
+            upvotes:70,
+            downvotes:5,
+            prefered:'Yes'
         },
         {
-            id:2,
+            ansid:2,
             author: user[1].userName,
             description :'it is possible to build web apps with react and mobile apps with react so building PWA with react is possible',
             created:date.toDateString(),
-            updated:date.toDateString(),
         }]
     },
     {
@@ -102,7 +111,9 @@ const questions =[
         tags:[tags[1],tags[2],tags[4]],
         category:category[1],
         created:date.toDateString(),
-        answers:[{}]
+        answers:[{
+
+        }]
     }
 
 ]

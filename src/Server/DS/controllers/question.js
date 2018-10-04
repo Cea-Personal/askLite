@@ -1,48 +1,39 @@
 import questions from '../models/question';
 import {category,tags} from '../models/sort';
 
-//--------- Methods for questions---------------
 
-// working
+//--------- Methods for questions---------------
 
 export const getQuestions = (req, res) =>{
   const tag =req.query.tags;
   const cat =req.query.category;
-  if(tag){
-    questions.filter((question) =>{
-
-    for (let i=0;i<question.tags.length;i++){
-
-      if(question.tags[i] === tag){
-         console.log(question,'logged');
-          res.status(200).send({
-          success:'true',
-          message: 'Questions with this tag',
-          //question
-        })
-      }
-
-    }
-
-  })
-  res.status(404).send({
-      success:'false',
-      message: 'Tag not found'
-    })
+if (tag) {
+    // the filter function only checks for a condition that evaluates to either true of false. And then automatically returns a new array, once it checks all the values in the array. You need to store that in a variable, filteredQuestions
+    const taggedQuestions = questions.filter(
+      question => question.tags.indexOf(tag) > -1
+    );
+    res.status(200).send({
+      success: "true",
+      message: "Questions with this tag",
+      question: taggedQuestions
+    });
+   return res.status(404).send({
+     success: "false",
+     message: "Tag not found"
+    });
 }
 if(cat){
-  questions.filter((question) => {
-    if(question.category === cat){
+  const categoryQuestions = questions.filter(question =>
+    question.category.indexOf(cat) >-1
+    )
       res.status(200).send({
         success: 'true',
         message: 'Questions in this category',
-        question
+        question:categoryQuestions
       })
-    }
-  })
-  res.status(404).send({
-      success:'false',
-      message: 'Category not found'
+     return res.status(404).send({
+       success:'false',
+       message: 'Category not found'
     })
 }
  res.status(200).send({
@@ -142,6 +133,7 @@ export const deleteQuestion =(req,res) =>{
     const id = parseInt(req.params.id, 10);
     questions.filter((question) => {
       if (question.id === id){
+
         if (!req.body.description) {
           res.status(400).send({
             success: 'false',
@@ -163,158 +155,165 @@ export const deleteQuestion =(req,res) =>{
         const answer = {
           id: question.answers.length + 1,
           description: req.body.description,
+          comments: req.body.comments,
           author: req.body.author
         };
         question.answers.push(answer);
         return res.status(201).send({
           success:'true',
           message:'You added an answer',
-          answer
+          question
         });
     }
-      return res.status(404).send({
+  });
+  return res.status(404).send({
         success:'false',
         message:'question does not exist'
 
       });
-
-  });
 }
 
 
 export const updateAnswer =(req,res) =>{
-  let answerFound;
-  let answerIndex;
-  const id = parseInt(req.params.id, 10);
-  questions.filter((question) => {
-    if (question.id === id) {
-      question.answers.filter((answer,index) => {
-        if (answer.id ===id ){
-          answerFound = answer;
-          answerIndex = index;
-        };
-      })
+  const id = parseInt(req.params.id,10);
+  const answerId = parseInt(req.params.ansid,10);
+  questions.filter(question => {
+    if (question.id === id){
+        if(answerId <= question.answers.length){
+        if(!req.body.description){
+          return res.status(400).send({
+            success:'false',
+            message:'answer is required',
+          })
+        }
+         const updatedAnswer = {
+          ansid:answerId,
+          author: req.body.author,
+          description: req.body.description,
+          created: questions[id -1].answers[answerId-1].created,
+          updated: new Date().toDateString(),
+          comments:req.body.comments,
+          upvotes:req.body.upvotes,
+          downvotes: req.body.downvotes,
+          prefered: req.body.prefered,
+        }
+        question.answers.splice(answerId-1,1,updatedAnswer);
+        return res.status(201).send({
+          success: 'true',
+          message: 'answer updated',
+          question
+        })
     }
-    if (!answerFound){
-      return res.status(404).send({
-        success:'false',
-        message: 'answer not found',
-      })
+    return res.status(404).send({
+      success: 'false',
+      message: 'answer not found'
+    })
     }
-    if(!req.body.description){
-      return res.status(400).send({
-        success:'false',
-        message:'answer is required',
-      })
-    }
-    if(!req.body.author){
-      return res.status(400).send({
-        success:'false',
-        message:'author is required',
-      });
-    }
-    const updatedAnswer ={
-      id:answerFound.id,
-      author: req.body.author || answerFound.author,
-      description: req.body.description || todoFound.description,
-      created: req.params.created,
-      updated: Date().now,
-      comments:req.body.comments
-    }
-    question.answers.splice(answerIndex,1,updatedAnswer);
-    return res.status(201).send({
-      success: 'true',
-      message: 'answer updated',
-      questions,
+    return res.status(404).send({
+      success: 'false',
+      message: 'question not found'
     })
 
-  });
+
+  })
 }
 export const deleteAnswer =(req,res) =>{
   // delete an Answer
   const id = parseInt(req.params.id, 10);
-  questions.filter((question) =>{
-    if(question.id === id){
-      question.answers.filter((answer, index) => {
-        if (answer.id === id) {
-          question.answers.splice(index,1);
+  const answerId = parseInt( req.params.ansid,10)
+  questions.filter(question =>{
+    if(question.id ===id){
+          question.answers.splice(answerId-1,1);
           res.status(200).send({
             success: 'true',
             message: 'answer deleted successfully',
-            questions,
+            question,
           });
         }
       });
-    }
     return res.status(404).send({
       success:  'false',
       message : 'answer does not exist',
     });
-  })
   }
 
 //-----------Methods for comments --------------
 // put or edit a comment
 
-export const updateComment = (req,res) =>{
-  let commentFound;
-  let commentIndex;
+export const updateComment = (req,res) => {
   const id = parseInt(req.params.id, 10);
-  questions.answers.filter((answer,index) => {
-    if (answer.id === id ){
-      answerFound = answer;
-      answerIndex = index;
-    }
+  const answerId = parseInt(req.params.ansid ,10);
+  const commentId = parseInt( req.params.commid ,10)
+  questions.filter(question => {
+    if (question.id ===id ){
+      question.answers.filter(answer =>{
+        if(answer.ansid === answerId){
+          if(!req.body.description){
+              return res.status(400).send({
+                success:'false',
+                message:'comment is required',
+              })
+            }
+          if(commentId <= answer.comments.length){
+            const updatedComment = {
+              commid : commentId,
+              author: req.body.author,
+              description: req.body.description,
+              comments:req.body.comments,
+              created: questions[id -1].answers[answerId-1].comments[commentId-1].created,
+              updated: new Date().toDateString(),
+            };
+            answer.comments.splice(commentId-1,1,updatedComment);
+            return res.status(201).send({
+              success: 'true',
+              message: 'comment updated',
+              question
+            })
+          }else{
+             const newComment = {
+              commid : answer.comments.length + 1,
+              author: req.body.author,
+              description: req.body.description,
+              comments:req.body.comments,
+              created:new Date().toDateString(),
+            };
+            answer.comments.push(newComment);
+            return res.status(201).send({
+              success: 'true',
+              message: 'comment added',
+              question
+            })
+          }
+      }
+      })
+      } return res.status(404).send({
+        success: 'false',
+        message: 'Answer not found',
+      })
   })
-  if (!answerFound){
-
-    return res.status(404).send({
-      success:'false',
-      message: 'answer not found',
-    })
-  }
-  if(!req.body.comments){
-    return res.status(204).send({
-      success:'true',
-      message:'No comments',
-    })
-  }
-
-  const updatedComment ={
-    author: req.body.author || answerFound.author,
-    description: req.body.description || todoFound.description,
-    comments:req.body.comments,
-    created: Date.now(),
-  }
-  questions.answers.splice(answerIndex,1,updatedAnswer);
-  return res.status(201).send({
-    success: 'true',
-    message: 'answer updated',
-    updatedAnswer,
-  })
-
 }
  export const deleteComment =(req,res) =>{
-    // delete an comment
-
     const id = parseInt(req.params.id, 10);
-
-    questions.answers.comments.filter((comments, index) => {
-    if (comments.id === id) {
-        questions.splice(index,1);
-        res.status(200).send({
-        success: 'true',
-        message: 'comment deleted successfully',
-        comments,
-      });
-    }
-    });
-      return res.status(404).send({
-      success:  'false',
-      message : 'comment does not exist',
-    });
-
-
+    const answerId = parseInt(req.params.ansid ,10);
+    const commentId = parseInt( req.params.commid ,10)
+    questions.filter(question => {
+      if (question.id ===id ){
+        question.answers.filter(answer =>{
+          if(answer.ansid === answerId){
+            answer.comments.splice(commentId-1,1);
+            return res.status(200).send({
+              success: 'true',
+              message: 'comment deleted successfully',
+              question
+            });
+          }
+          return res.status(404).send({
+            success:  'false',
+            message : 'comment does not exist',
+          });
+        })
+      }
+    })
 }
 
 
