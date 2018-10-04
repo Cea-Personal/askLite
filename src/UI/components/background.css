@@ -1,0 +1,15 @@
+.red{
+    background-color:red
+}
+.orange{
+    background-color:orange;
+}
+.orangeRed{
+    background-color:orangeRed;
+}
+.black{
+    background-color:black;
+}
+.banner{
+    background-image:url("../images/banner.gif")
+}
