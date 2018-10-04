@@ -6,8 +6,7 @@ install:
 before_script:
 - npm install -g codeclimate-test-reporter
 - npm install -g coveralls
-script:
-- npm test
+script: 'true'0
 after_script:
 - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_success:
@@ -16,9 +15,9 @@ after_success:
 - coveralls < coverage/lcov.info
 after_failure:
 
-before_deploy
-deploy
-after_deploy
+before_deploy: 'true'
+deploy: 'true'
+after_deploy: 'true'
 branches:
   only:
   - gh-pages
