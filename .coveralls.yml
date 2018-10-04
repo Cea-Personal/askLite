@@ -1,2 +1,3 @@
+require("dotenv").config();
 service_name: travis-pro
-repo_token:
+repo_token: process.env.coverallsToken
