@@ -33,11 +33,11 @@ router.get('/users/:id', getUser);
 router.post('/questions', postQuestion);
 router.post('/questions/:id/answers', postAnswer);
 router.post('/users',postUser);
-router.put('/questions/:id/answers/:id',updateAnswer);
-router.put('/questions/:id/answers/:id/comments/:id',updateComment)//yet to work on the controller for this
+router.put('/questions/:id/answers/:ansid',updateAnswer);
+router.put('/questions/:id/answers/:ansid/comments/:commid',updateComment)//yet to work on the controller for this
 router.delete('/questions/:id',deleteQuestion);
-router.delete('/questions/:id/answers/:id',deleteAnswer);
-router.delete('/questions/:id/answers/:id/comments/:id',deleteComment);
+router.delete('/questions/:id/answers/:ansid',deleteAnswer);
+router.delete('/questions/:id/answers/:ansid/comments/:commid',deleteComment);
 router.delete('/users/:id',deleteUser);
 
 
