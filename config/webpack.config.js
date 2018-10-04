@@ -5,6 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  watch:true,
+  watchOptions:{
+    ignored: ['node_modules','./build'],
+    poll:1000
+  },
   mode: 'development',
   entry: {
     commons:'./src/UI/js/shared.js',
@@ -18,7 +23,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, '../build'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'js/[name].js'
   },
   module: {
