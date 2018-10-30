@@ -4,7 +4,7 @@ let date = new Date();
 
 const questions =[
     {
-        id:1,
+        questionId:1,
         author: user[0].userName,
         subject:"Is it possible to implement modular css without webpack",
         description:" i have been seeing write up and tutorials on implementing css modules.Most tutorial go through the process of bundling and using a framework .I just want to know if it possible to implement it with vanilla javascript and no webpack, if yes how.",
@@ -41,7 +41,7 @@ const questions =[
         }]
     },
     {
-        id:2,
+        questionId:2,
         author:user[4].userName,
         subject:"How do i create an MVP in Ruby",
         description:" I am trying to implement an MVP architecture in Ruby, i know how to use MVC but fairly new to MVP",
@@ -54,7 +54,7 @@ const questions =[
         prefered:'Yes'
     },
     {
-        id:3,
+        questionId:3,
         author:user[4].userName,
         subject:"How to become a GDE",
         description:"Hey guys, i've been a solution architect for a year now,my next goal is to become a google developer expert in a bid to give back to the community.What steps can be taken to become one?",
@@ -73,7 +73,7 @@ const questions =[
         }]
     },
     {
-        id:4,
+        questionId:4,
         author:user[2].userName,
         subject:"Is it possible to build PWA with React",
         description:"I have being building web apps with react but i want to incorporate the best features of mobile apps into my web apps.How do i implement progressive web apps?",
@@ -104,7 +104,7 @@ const questions =[
         }]
     },
     {
-        id:5,
+        questionId:5,
         author:user[3].userName,
         subject:"Is it possible to implement modular css without webpack",
         description:" i have been seeing write up and tutorials on implementing css modules.Most tutorial go through the process of bundling and using a framework .I just want to know if it possible to implement it with vanilla javascript and no webpack, if yes how.",
@@ -117,4 +117,5 @@ const questions =[
     }
 
 ]
-export default questions;
+export default questions
+

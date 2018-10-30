@@ -1,0 +1,64 @@
+.tabs{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+
+}
+
+.horizontal{
+    float:left;
+    padding:1.8vh 1vw;
+}
+
+.vertical{
+
+}
+
+.menuButton{
+    padding:1vh 2vw;
+    border:none;
+    text-decoration:none;
+    composes: body from "./color.css"
+}
+.active{
+    composes: primary from './background.css';
+    padding:1vh 2vw;
+    text-decoration:none;
+    border:none;
+    font-size:16px;
+    color:white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.menuButton:hover{
+    color:white;
+    background-color:#ef7c0b;
+    border-radius:5px;
+
+}
+
+.headButton{
+    float:left;
+    text-decoration:none;
+    composes: white from "./color.css";
+    padding-right:1.5vw;
+}
+.headButton:hover{
+    color:#ef7c0b;
+}
+.topMenu{
+    composes:tabs;
+    float:right;
+
+}
+.footerButton{
+    display:block;
+    text-decoration:none;
+    float:left;
+    padding:1vh 2vw;
+    composes: light from "./color.css";
+}
+.footerButton:hover{
+    color:#ef7c0b;
+
+}

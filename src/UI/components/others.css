@@ -1,0 +1,14 @@
+.banner{
+    background-image:url("../images/banner.gif") ;
+    background-size:95vw 500px;
+    outline:none;
+    background-repeat:repeat-x;
+    border-bottom: 7vh solid gainsboro;
+}
+.accordion{
+
+}
+
+
+
+

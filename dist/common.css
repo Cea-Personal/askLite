@@ -1,0 +1,193 @@
+.background__primary___2U_W{
+    background-color:#ef7c0b
+}
+.background__secondary___2alP{
+    background-color:blue
+}
+.background__success___3wTf{
+    background-color:green;
+}
+.background__danger___a0Wk{
+    background-color:red;
+}
+.background__muted___2DVL{
+    background-color:grey;
+}
+.background__info___Wstq{
+    background-color:lightseagreen;
+}
+.background__white___ozXC{
+    background-color:white;
+}
+.background__dark___1f9_{
+    background-color:darkgray;
+
+}
+.background__body___3brT{
+    background-color:black;
+
+}
+.background__light___3ypr{
+    background-color:gainsboro;
+}
+.background__warning___2ltf{
+    background-color:lightsalmon;
+}
+.background__top___1TDJ{
+    background-color:#6d2f1f ;
+    height:35px;
+}
+.color__primary___3Cu0{
+    color:#ef7c0b
+}
+.color__secondary___MFHG{
+    color:blue
+}
+.color__success___l4XX{
+    color:green;
+}
+.color__danger___1Mqq{
+    color:red;
+}
+.color__muted___10i3{
+    color:grey
+}
+.color__info___3IJC{
+    color:lightseagreen
+}
+.color__white___2a3j{
+    color:white
+}
+.color__dark___20Wb{
+    color:darkgray
+
+}
+.color__body___212d{
+    color:black;
+
+}
+.color__light___2OcO{
+    color:lightgrey;
+}
+.color__warning___1v9o{
+    color:lightsalmon;
+}
+.layouts__common___2GKn{
+}
+
+.layouts__body___25Ay{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+.layouts__main___J9ZF{
+	background-color:inherit;
+	height:100%;
+	margin-left: 8.2%;
+	margin-right:8.8%;
+}
+.layouts__navBar___30y_{
+	height:50px;
+	border-bottom:2vh solid gainsboro;
+}
+.layouts__section___1cBQ{
+	margin-top:0;
+
+}
+.layouts__footer___1Y6I{
+	padding:1% 7.6%;
+	height:10%;
+}
+
+.layouts__foot___2ZIk{
+	width:41.8vw;
+	float:left;
+
+}
+.layouts__trademark___1JEg{
+	width:80vw;
+	text-align:center;
+	padding-top:4vw;
+
+}
+.layouts__tabs___B4SJ{
+	padding-bottom:0.1%;
+}
+.layouts__question___1pbA{
+	border-bottom:2px inset #ef7c0b;
+}
+.layouts__fix___33kV{
+    clear:both;
+}
+.layouts__medium___1ye8{
+	@media screen and (min-width:480px) {
+
+	}
+}
+
+.layouts__large___142H{
+	@media screen {
+
+	}
+
+}
+.nav__tabs___9pf-{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+
+}
+
+.nav__horizontal___vQzC{
+    float:left;
+    padding:1.8vh 1vw;
+}
+
+.nav__vertical___24pQ{
+
+}
+
+.nav__menuButton___2YHc{
+    padding:1vh 2vw;
+    border:none;
+    text-decoration:none
+}
+.nav__active___1R_k{
+    padding:1vh 2vw;
+    text-decoration:none;
+    border:none;
+    font-size:16px;
+    color:white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.nav__menuButton___2YHc:hover{
+    color:white;
+    background-color:#ef7c0b;
+    border-radius:5px;
+
+}
+
+.nav__headButton___11SK{
+    float:left;
+    text-decoration:none;
+    padding-right:1.5vw;
+}
+.nav__headButton___11SK:hover{
+    color:#ef7c0b;
+}
+.nav__topMenu___1VvR{
+    float:right;
+
+}
+.nav__footerButton___b2Wr{
+    display:block;
+    text-decoration:none;
+    float:left;
+    padding:1vh 2vw;
+}
+.nav__footerButton___b2Wr:hover{
+    color:#ef7c0b;
+
+}
+

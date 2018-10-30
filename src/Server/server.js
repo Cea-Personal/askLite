@@ -1,8 +1,11 @@
 
 import express from 'express';
+import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import router from './DS/routes/route';
+import router from './route';
 import cookieParser from 'cookie-parser';
+import '@babel/polyfill';
+
 
 const server = express();
 
@@ -11,7 +14,9 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use('/api/v1', router);
 
-const PORT = 8080;
+
+
+const PORT = 3000;
 const app = server.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });

@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'",
     "start": "npm-run-all --parallel watch:build watch:server",
     "watch:build": "webpack --config ./config/webpack.config.js",
-    "watch:server": "node_modules/.bin/nodemon ./src/server/server.js --exec babel-node --"
+    "watch:server": "node_modules/.bin/nodemon ./src/server/server.js --exec babel-node --",
+    "connect": "babel-node ./src/Server/DB/models/dbModel.js"
   },
   "repository": {
     "type": "git",
@@ -21,16 +23,19 @@
   },
   "homepage": "https://github.com/basilcea/stackLite#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
     "coveralls": "^3.0.2",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "exports-loader": "^0.7.0",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "make-runnable": "^1.3.6",
     "mini-css-extract-plugin": "^0.4.2",
     "nodemon": "^1.18.3",
     "request": "^2.88.0",
@@ -39,16 +44,21 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/polyfill": "^7.0.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "debug": "^4.0.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "moment": "^2.22.2",
     "morgan": "^1.9.1",
     "npm-run-all": "^4.1.3",
+    "pg": "^7.5.0",
     "serve-favicon": "^2.5.0",
-    "style-loader": "^0.23.0"
+    "style-loader": "^0.23.0",
+    "uuidv4": "^2.0.0",
+    "wowjs": "^1.1.3"
   }
 }

@@ -1,15 +1,39 @@
-.red{
-    background-color:red
+.primary{
+    background-color:#ef7c0b
 }
-.orange{
-    background-color:orange;
+.secondary{
+    background-color:blue
 }
-.orangeRed{
-    background-color:orangeRed;
+.success{
+    background-color:green;
 }
-.black{
+.danger{
+    background-color:red;
+}
+.muted{
+    background-color:grey;
+}
+.info{
+    background-color:lightseagreen;
+}
+.white{
+    background-color:white;
+}
+.dark{
+    background-color:darkgray;
+
+}
+.body{
     background-color:black;
+
 }
-.banner{
-    background-image:url("../images/banner.gif")
+.light{
+    background-color:gainsboro;
+}
+.warning{
+    background-color:lightsalmon;
+}
+.top{
+    background-color:#6d2f1f ;
+    height:35px;
 }

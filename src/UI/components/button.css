@@ -1,14 +1,52 @@
-.error {
-background-color:red;
-color:white;
-font-size:20px;
-padding:20px;
+.common{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-size:16px;
+    outline:0;
+    border:none;
+    width:23%;
+    padding:1vh;
+    margin-right:2%;
+    composes:white from './color.css'
+
+}
+.rounded{
+    composes: common;
+    border:1px solid white;
+    background-color: #6d2f1f;
+    border-radius:5px;
+}
+.rounded:hover{
+    background-color: black;
+    border:1px solid black;
+    color:#ef7c0b;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.basic {
+    composes: common;
+    background-color: inherit;
+    composes: body from './color.css';
+}
+.basic:hover{
+    background-color:#ef7c0b;
+    color:white;
+}
+.error {
+    composes: common;
+    composes: danger from './background.css';
+}
 .success{
-background-color:green;
-color:white;
-font-size:20px;
-padding:20px;
+    composes: rounded;
+    composes: success from './background.css';
+}
+.disabled{
+    composes: rounded;
+    composes: mute from './color.css';
+    cursor: not-allowed;
+}
+.fullLength{
+    composes: rounded;
+    width: 100%
 
 }

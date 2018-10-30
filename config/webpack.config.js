@@ -7,19 +7,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   watch:true,
   watchOptions:{
-    ignored: ['node_modules','./build'],
+    ignored: ['node_modules','./dist'],
     poll:1000
   },
   mode: 'development',
   entry: {
-    commons:'./src/UI/js/shared.js',
+    shared:'./src/UI/js/shared.js',
     index:'./src/UI/js/index.js',
-    home:'./src/UI/js/home.js',
+    home: './src/UI/js/home.js',
     question:'./src/UI/js/question.js',
     login:'./src/UI/js/login.js',
     profile:'./src/UI/js/profile.js',
     questionnare:'./src/UI/js/questionnare.js',
     questionList:'./src/UI/js/questionList.js',
+    about:'./src/UI/js/about.js'
   },
 
   output: {
@@ -35,6 +36,7 @@ module.exports = {
           {loader: 'babel-loader'},
         ],
         include: __dirname + '/src',
+        exclude: /node_modules/
       },
       // take all our style.css and builds one styles.css for use in our pages
       {
@@ -63,14 +65,14 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash:4].css",
+      filename: "[name].css",
     }),
     new HtmlWebpackPlugin({
       // create landing page
       filename:'index.html',
       inject:'body',
       hash: true,
-      chunks: ['index','styles'],
+      chunks: ['styles','common','shared',"index"],
       template: './src/UI/index.html',
     }),
     new HtmlWebpackPlugin({
@@ -79,7 +81,7 @@ module.exports = {
       //inject js content in body of html
       inject:'body',
       //three chunks to be included
-      chunks:['styles','commons','questionnare'],
+      chunks:['styles','common','shared','questionnare'],
       hash: true,
       //use as template index.html
       template: './src/UI/index.html',
@@ -88,7 +90,7 @@ module.exports = {
       // create login page
       filename:'login.html',
       inject:'body',
-      chunks:['commons','styles','login'],
+      chunks:['styles','common','shared','login'],
       hash: true,
       template: './src/UI/index.html',
     }),
@@ -96,7 +98,7 @@ module.exports = {
       // create question page
       filename:'question.html',
       inject:'body',
-      chunks:['styles','commons','question'],
+      chunks:['styles','common','shared','question'],
       hash: true,
       template: './src/UI/index.html',
     }),
@@ -104,7 +106,7 @@ module.exports = {
       // create profile page
       filename:'profile.html',
       inject:'body',
-      chunks:['styles','commons','profile'],
+      chunks:['styles','common','shared','profile'],
       hash: true,
       template: './src/UI/index.html',
     }),
@@ -112,7 +114,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename:'home.html',
       inject:'body',
-      chunks:['styles','commons','home'],
+      chunks:['styles','common','shared','home'],
       hash: true,
       template: './src/UI/index.html',
     }),
@@ -120,7 +122,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename:'questionList.html',
       inject:'body',
-      chunks:['styles','commons','questionList'],
+      chunks:['styles','common','shared','questionList'],
+      hash: true,
+      template: './src/UI/index.html',
+    }),
+     new HtmlWebpackPlugin({
+      filename:'about.html',
+      inject:'body',
+      chunks:['styles','commons','shared','about',],
       hash: true,
       template: './src/UI/index.html',
     })
@@ -130,8 +139,8 @@ module.exports = {
     splitChunks:{
       cacheGroups:{
       // cache a shared module for all part of the sites that are shared
-        commons: {
-          name: "commons",
+        common: {
+          name: "common",
           minChunks: 2,
           chunks: 'initial',
           priority: 10,
@@ -148,8 +157,8 @@ module.exports = {
         styles:{
           name:"styles",
           test: /\.css$/,
-          chunks: 'all',
-          enforce:true
+          chunks: 'initial',
+          enforce:true,
         }
       }
     }

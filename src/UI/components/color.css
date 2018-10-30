@@ -1,0 +1,35 @@
+.primary{
+    color:#ef7c0b
+}
+.secondary{
+    color:blue
+}
+.success{
+    color:green;
+}
+.danger{
+    color:red;
+}
+.muted{
+    color:grey
+}
+.info{
+    color:lightseagreen
+}
+.white{
+    color:white
+}
+.dark{
+    color:darkgray
+
+}
+.body{
+    color:black;
+
+}
+.light{
+    color:lightgrey;
+}
+.warning{
+    color:lightsalmon;
+}
