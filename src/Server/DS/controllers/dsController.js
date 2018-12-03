@@ -6,7 +6,7 @@ import user from '../models/user';
 //--------- Methods for questions---------------
 class dsController {
 
-  static getQuestions(req,res){
+  static getQuestionsByFilter(req,res){
     const tag = req.query.tags;
     const cat = req.query.category;
     if(tag){
@@ -37,13 +37,13 @@ class dsController {
         message: 'Category not found'
      })
     }
-
+  }
+  static getQuestions(req,res){
     res.status(200).send({
       success: 'true',
       message: 'questions retrieved successfully',
       questions
     });
-
     res.status(404).send({
       success:'false',
       message: 'questions not found',
@@ -325,7 +325,7 @@ class dsController {
     })
   };
 
-  static getUser (req,res){
+  static login (req,res){
       // force all id string to integer
     const id = parseInt(req.params.id, 10);
     // create a new array for each element of the userss array and apply the function user to it
@@ -344,7 +344,7 @@ class dsController {
         message : 'user does not exist',
       });
   }
-  static postUser (req,res){
+  static createUser (req,res){
 
     if (!req.body.fullName) {
       return res.status(400).send({

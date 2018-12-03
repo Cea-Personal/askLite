@@ -1,6 +1,27 @@
 .shadowed{
+    text-shadow:2px 2px black;
 
 }
 .italized{
 
+}
+.text{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.welcome{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    composes: white from "./color.css"
+}
+.h2{
+    font-size: 30px;
+    font-weight: bold;
+    word-spacing:20px;
+    composes: welcome;
+    composes: shadowed;
+
+}
+.centered{
+    text-align:center
 }

@@ -2,28 +2,42 @@ import dotenv from 'dotenv';
 import express from 'express'
 dotenv.config();
 
+import dsController from './DS/Controllers/dsController' ;
+import dbController from './DB/Controllers/dbController' ;
+import Auth from './DB/auth/auth';
 
-
-import dsController from './DS/controllers/dsController' ;
-import dbController from './DB/controllers/dbController' ;
 
 const Controller = dbController || dsController
 const router = express.Router();
+//admin routes
+router.get('/users',Auth.checkToken,Controller.getAllUsers);
+router.put('/users/:userId/makeadmin',Auth.checkToken,Controller.makeAdmin)
+
+// user routes
+router.post('/users/signup',Controller.createUser);
+router.post('/users/login', Controller.login);
+router.post('/users/logout',Controller.logout);
+router.put('/users/me',Auth.checkToken , Controller.editProfile);
+router.delete('/users/:userId',Auth.checkToken , Controller.deleteUser);
 
 
-router.post('/questions', Controller.postQuestion);
-router.post('/users',Controller.postUser);
-router.post('/questions/:questionId/answers', Controller.postAnswer);
-/*router.get('/questions', Controller.getQuestions);
-router.get('/questions/:id', Controller.getQuestion);
-router.get('/users', Controller.getUsers);
-router.get('/users/:id', Controller.getUser);
-router.put('/questions/:id/answers/:ansid',Controller.updateAnswer);
-router.put('/questions/:id/answers/:ansid/comments/:commid',Controller.updateComment)
-router.delete('/questions/:id',Controller.deleteQuestion);
-router.delete('/questions/:id/answers/:ansid', Controller.deleteAnswer);
-router.delete('/questions/:id/answers/:ansid/comments/:commid', Controller.deleteComment);
-router.delete('/users/:id',Controller.deleteUser);*/
+// general view routes
+router.get('/questions/all', Controller.getQuestions);
+router.get('/questions', Controller.getQuestionsByFilter);
+router.get('/questions/:questionId', Controller.getQuestion);
+// user view routes for questions
+router.post('/question', Auth.checkToken , Controller.postQuestion);
+router.get('/questions/me/all',Auth.checkToken , Controller.getQuestionsByUser);
+//router.get('/questions/me/:questionId',Auth.checkToken , Controller.getQuestionByUser);
+router.delete('/questions/:questionId', Auth.checkToken, Controller.deleteQuestion);
+// user view routes for answers
+router.post('/questions/:questionId/answers', Auth.checkToken , Controller.postAnswer);
+router.put('/questions/:questionId/answers/:answerId',Auth.checkToken , Controller.updateAnswer);
+router.delete('/questions/:questionId/answers/:answerId', Auth.checkToken , Controller.deleteAnswer);
+// user view routes for comments
+router.put('/answers/:answerId/comments/:commentId',Auth.checkToken , Controller.updateComment);
+router.delete('/answers/:answerId/comments/:commentId', Auth.checkToken , Controller.deleteComment);
+
 
 
 export default router;

@@ -7,17 +7,57 @@
         <meta name="keywords" content="ask, question, answer">
         <meta name="author" content="Cea">
         <meta name="viewport" content ="width=device-width, initial-scale=1.0">
-    <link href="common.css?098b4ad241c97909ea6f" rel="stylesheet"><link href="styles.css?098b4ad241c97909ea6f" rel="stylesheet"></head>
-    <body>
+        
+    <link href="common.css?c5e1f8729d1fad8ebc29" rel="stylesheet"><link href="styles.css?c5e1f8729d1fad8ebc29" rel="stylesheet"></head>
+    <body>       
     <header id="header"></header>
     <nav id="headNav"></nav>
     <div id="banner"></div>
     <section>
-        <div></div>
+        <div>
+        <div id='loginFrame'>
+            <button  type='button' href='login.html#login'>Login</button>
+            <button type='button' href='login.html#signup'>Sign Up</button>
+            <button type='button' href='login.html#reset'>Reset Password</button>
+            <div id="login">
+                <form>
+                    <p>Connect with</p>
+                    <a href=#>Login with facebook</a> 
+                    <a href=#>Login with twitter</a>
+                    <a href=#>Login with github</a>
+                    <p>Or Login with Email</p>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                </form>
+                
+            </div>
+            <div id="signup">
+                <form>
+                    <p>Sign up to the fast growing beginner's Community</p>
+                    <input type="text" placeholder="User Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type ="password" placeholder="Confirm Password"required>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+            <div id='reset'>
+                
+                <form>
+                    <p>Enter your registered email address and a reset link will be sent</p>
+                    <input type='email' placeholder='email' required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div>
+        </div>
+        </div>
     </section>
-    <aside></aside>
     <footer>
     </footer>
-
-    <script type="text/javascript" src="js/common.js?098b4ad241c97909ea6f"></script><script type="text/javascript" src="js/styles.js?098b4ad241c97909ea6f"></script><script type="text/javascript" src="js/shared.js?098b4ad241c97909ea6f"></script><script type="text/javascript" src="js/login.js?098b4ad241c97909ea6f"></script></body>
+    <script src='../node_modules/wow.js/dist/wow.js'></script>
+    <script>new WOW().init()</script>
+    <script type="text/javascript" src="js/common.js?c5e1f8729d1fad8ebc29"></script><script type="text/javascript" src="js/styles.js?c5e1f8729d1fad8ebc29"></script><script type="text/javascript" src="js/shared.js?c5e1f8729d1fad8ebc29"></script><script type="text/javascript" src="js/login.js?c5e1f8729d1fad8ebc29"></script></body>
 </html>

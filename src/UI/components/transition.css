@@ -1,3 +1,120 @@
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  animation-duration:4s;
+}
+
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    opacity:0.8;
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    opacity:1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+  animation-duration:2s;
+}
+
 @-webkit-keyframes fadeInLeft {
     from {
       opacity: 0;
@@ -147,6 +264,7 @@
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
   animation-name: flipInX;
+  animation-duration: 5s
 }
 @-webkit-keyframes slideInLeft {
   from {
@@ -177,6 +295,7 @@
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes slideInRight {
@@ -196,18 +315,20 @@
   from {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    visibility:visible;
   }
 
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 }
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes slideInUp {
@@ -227,10 +348,11 @@
   from {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-    visibility: visible;
+    visibility: hidden;
   }
 
   to {
+    visibility:visible;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
@@ -239,6 +361,7 @@
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
+  animation-duration:4s;
 }
 
 @-webkit-keyframes slideOutDown {
@@ -260,7 +383,7 @@
     animation-fill-mode: both;
   }
 
-  .animated.infinite {
+  .infinite {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
@@ -285,31 +408,12 @@
     animation-delay: 4s;
   }
 
-  .animated.delay-5s {
+  .delay_5s {
     -webkit-animation-delay: 5s;
     animation-delay: 5s;
   }
 
-  .animated.fast {
-    -webkit-animation-duration: 800ms;
-    animation-duration: 800ms;
-  }
-
-  .animated.faster {
-    -webkit-animation-duration: 500ms;
-    animation-duration: 500ms;
-  }
-
-  .animated.slow {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-  }
-
-  .animated.slower {
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-  }
-
+ 
   @media (prefers-reduced-motion) {
     .animated {
       -webkit-animation: unset !important;

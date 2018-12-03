@@ -1,5 +1,6 @@
 import pg from 'pg'
 import dotenv from 'dotenv';
+import redis from 'redis';
 
 dotenv.config();
 
@@ -13,4 +14,11 @@ client.connect().then(() => {
   console.log('Connection Not Successful.',error);
 });
 
-export default client;
+export const redisClient = redis.createClient()
+redisClient.on('connect',()=>{
+  console.log('Redis client connected')
+});
+redisClient.on('error', (error)=>{
+  console.log('Redis not connected', error)
+});
+export default client

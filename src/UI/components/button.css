@@ -4,8 +4,8 @@
     font-size:16px;
     outline:0;
     border:none;
-    width:23%;
-    padding:1vh;
+    width:24.42%;
+    padding:1vh 0vh;
     margin-right:2%;
     composes:white from './color.css'
 
@@ -17,7 +17,7 @@
     border-radius:5px;
 }
 .rounded:hover{
-    background-color: black;
+    background-color:black;
     border:1px solid black;
     color:#ef7c0b;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -25,12 +25,39 @@
 
 .basic {
     composes: common;
+    margin:0px;
+    font-weight: bold;
     background-color: inherit;
     composes: body from './color.css';
+    font-size:16px;
 }
 .basic:hover{
     background-color:#ef7c0b;
     color:white;
+}
+.login {
+    composes: common;
+    margin:0;
+    width:32.95%;
+    background-color: grey;
+    composes: white from './color.css';
+    font-size:16px;
+    
+}
+.login:hover{
+    background-color:#ef7c0b;
+ 
+}
+.active{
+composes: primary from './background.css';
+width:32.95%;
+outline:none;
+padding:1vh 2vw;
+text-decoration:none;
+border:none;
+font-size:16px;
+color:white;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .error {
     composes: common;
@@ -47,6 +74,8 @@
 }
 .fullLength{
     composes: rounded;
-    width: 100%
+    width: 50%;
+    padding-left: 20%;
+    float: left;
 
 }

@@ -19,8 +19,8 @@ module.exports = {
     login:'./src/UI/js/login.js',
     profile:'./src/UI/js/profile.js',
     questionnare:'./src/UI/js/questionnare.js',
-    questionList:'./src/UI/js/questionList.js',
-    about:'./src/UI/js/about.js'
+    questionList:'./src/UI/js/questionList.js'
+    
   },
 
   output: {
@@ -84,7 +84,7 @@ module.exports = {
       chunks:['styles','common','shared','questionnare'],
       hash: true,
       //use as template index.html
-      template: './src/UI/index.html',
+      template: './src/UI/questionnare.html',
     }),
     new HtmlWebpackPlugin({
       // create login page
@@ -92,7 +92,7 @@ module.exports = {
       inject:'body',
       chunks:['styles','common','shared','login'],
       hash: true,
-      template: './src/UI/index.html',
+      template: './src/UI/login.html',
     }),
     new HtmlWebpackPlugin({
       // create question page
@@ -100,7 +100,7 @@ module.exports = {
       inject:'body',
       chunks:['styles','common','shared','question'],
       hash: true,
-      template: './src/UI/index.html',
+      template: './src/UI/question.html',
     }),
     new HtmlWebpackPlugin({
       // create profile page
@@ -108,7 +108,7 @@ module.exports = {
       inject:'body',
       chunks:['styles','common','shared','profile'],
       hash: true,
-      template: './src/UI/index.html',
+      template: './src/UI/profile.html',
     }),
     // create home page
     new HtmlWebpackPlugin({
@@ -116,7 +116,7 @@ module.exports = {
       inject:'body',
       chunks:['styles','common','shared','home'],
       hash: true,
-      template: './src/UI/index.html',
+      template: './src/UI/home.html',
     }),
     // create questionList page
     new HtmlWebpackPlugin({
@@ -124,14 +124,7 @@ module.exports = {
       inject:'body',
       chunks:['styles','common','shared','questionList'],
       hash: true,
-      template: './src/UI/index.html',
-    }),
-     new HtmlWebpackPlugin({
-      filename:'about.html',
-      inject:'body',
-      chunks:['styles','commons','shared','about',],
-      hash: true,
-      template: './src/UI/index.html',
+      template: './src/UI/questionList.html',
     })
   ],
   stats:{ children: false },

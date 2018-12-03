@@ -1,11 +1,18 @@
 
 import express from 'express';
-import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import router from './route';
-import cookieParser from 'cookie-parser';
+import {execFile} from 'child_process'
 import '@babel/polyfill';
+import dotenv from 'dotenv';
+dotenv.config()
 
+execFile('redis/redis-server.exe',(error,stdout)=>{
+  if(error){
+    throw error
+  }
+  console.log(stdout)
+})
 
 const server = express();
 
@@ -15,11 +22,11 @@ server.use(bodyParser.urlencoded({ extended: false }));
 server.use('/api/v1', router);
 
 
-
 const PORT = 3000;
 const app = server.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
 
-
 export default app;
+
+
