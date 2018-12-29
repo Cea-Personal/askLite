@@ -9,7 +9,7 @@
     "start": "npm-run-all --parallel watch:build watch:server",
     "watch:build": "webpack --config ./config/webpack.config.js",
     "watch:server": "node_modules/.bin/nodemon ./src/server/server.js --exec babel-node --",
-    "connect": "babel-node ./src/Server/DB/models/dbModel.js"
+    "connect": "babel-node ./src/Server/DB/models/dbModel"
   },
   "repository": {
     "type": "git",
@@ -51,6 +51,7 @@
     "@babel/polyfill": "^7.0.0",
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
+    "chai-uuid": "^1.0.6",
     "cookie-parser": "^1.4.3",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",

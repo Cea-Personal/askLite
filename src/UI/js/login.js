@@ -2,6 +2,7 @@ import card from '../components/card.css'
 import button from '../components/button.css'
 import background from '../components/background.css'
 import text from '../components/text.css'
+import layout from'../components/layouts.css'
 import form from '../components/form.css'
 
 const loginCard = document.getElementById('loginFrame')
@@ -19,25 +20,25 @@ loginCard.className =`${card.loginCard}`
 loginButton.className =`${button.active}`
 signupButton.className =`${button.login}`
 resetButton.className = `${button.login}`
-signup.style.display='none'
-reset.style.display='none'
+signup.className = layout.none
+reset.className = layout.none
 
 loginButton.onclick =()=>{
     loginButton.className =`${button.active}`
     signupButton.className =`${button.login}`
     resetButton.className = `${button.login}`
-    login.style.display ='block'
-    signup.style.display='none'
-    reset.style.display='none'
+    login.className = layout.block
+    signup.className = layout.none
+    reset.className = layout.none
 
 }
 signupButton.onclick =()=>{
     signupButton.className =`${button.active}`
     loginButton.className =`${button.login}`
     resetButton.className = `${button.login}`
-    signup.style.display='block'
-    login.style.display='none'
-    reset.style.display='none'
+    signup.className = layout.block
+    login.className = layout.none
+    reset.className = layout.none
 
 }
 
@@ -45,9 +46,9 @@ resetButton.onclick =()=>{
     resetButton.className =`${button.active}`
     loginButton.className =`${button.login}`
     signupButton.className = `${button.login}`
-    reset.style.display='block'
-    login.style.display='none'
-    signup.style.display='none'
+    reset.className = layout.block
+    login.className = layout.none
+    signup.className = layout.none
 
 }
 let par = loginCard.querySelectorAll('p')

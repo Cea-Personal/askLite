@@ -151,4 +151,4 @@ submitElement.setAttribute("value", "Ask Question");
 submitElement.setAttribute("class", `${button.fullLength}`);
 document.getElementsByClassName(card.questionCard)[2].appendChild(submitElement);
 let buttons =form.querySelector('button')
-    buttons[0].innerHTML ='Ask Question'
+    buttons.innerHTML ='Ask Question'

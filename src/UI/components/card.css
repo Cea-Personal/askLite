@@ -5,6 +5,7 @@
     transition: 0.3s;
     padding:5px;
     outline:0;
+
     composes: white from './background.css'
 }
 .questionTop{
@@ -55,4 +56,8 @@
     width:70%;
     margin:2% 15%;
     padding:0vw 0vw;
+}
+.profileCard{
+    composes:questionCard;
+    min-height:100%;
 }

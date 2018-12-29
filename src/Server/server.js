@@ -2,17 +2,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './route';
-import {execFile} from 'child_process'
 import '@babel/polyfill';
 import dotenv from 'dotenv';
 dotenv.config()
-
-execFile('redis/redis-server.exe',(error,stdout)=>{
-  if(error){
-    throw error
-  }
-  console.log(stdout)
-})
 
 const server = express();
 

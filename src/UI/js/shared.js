@@ -4,6 +4,8 @@ import nav from '../components/nav.css'
 import img from '../images/logo.png'
 import drop from '../images/drop.png'
 import animate from '../components/transition.css'
+import others from '../components/others.css'
+import button from '../components/button.css'
 
 /* --------- get Elements -----------------*/
 const header = document.querySelector("header");
@@ -90,7 +92,18 @@ navBar.appendChild(createDiv('id','navMenu'));
 let tabs = document.getElementById('navMenu');
 tabs.style.width="60%";
 tabs.style.float="right";
-tabs.appendChild(createList(5,nav.tabs,`${nav.horizontal} ${animate.flipInX} wow`, nav.menuButton));
+let searchmenu=tabs.appendChild(createDiv('id','search'))
+searchmenu.className += others.searchmenu
+const searchform = document.createElement('input')
+searchform.setAttribute('type','text')
+searchform.className = others.searchform
+searchform.placeholder='Search Questions...'
+searchmenu.appendChild(searchform)
+let searchButton = document.createElement('button');
+searchButton.innerHTML='Search'
+searchButton.className = button.search
+searchmenu.appendChild(searchButton)
+tabs.appendChild(createList(3,nav.tabs,`${nav.horizontal} ${animate.flipInX} wow`, nav.menuButton));
 let navLi =tabs.querySelectorAll('li');
 navLi[0].firstChild.href ="home.html"
 navLi[0].firstChild.innerHTML ="HOME"
@@ -104,10 +117,7 @@ newImage.style.height='40px';
 navLi[1].firstChild.appendChild(newImage)
 navLi[2].firstChild.href ="questionnare.html"
 navLi[2].firstChild.innerHTML ="ASK QUESTION"
-navLi[3].firstChild.href ='questionList.html'
-navLi[3].firstChild.innerHTML ="QUESTIONS"
-navLi[4].firstChild.href ='profile.html'
-navLi[4].firstChild.innerHTML ="YOUR PROFILE"
+
 
 
 
@@ -129,16 +139,14 @@ footer.appendChild(createDiv('class',layout.trademark))
 
 let footerDiv = footer.querySelectorAll('div');
 let firstFoot = footerDiv[0];
-firstFoot.appendChild(createList(4,nav.tabs,`wow ${animate.bounceInDown}`, nav.footerButton))
+firstFoot.appendChild(createList(3,nav.footer,`wow ${animate.bounceInDown}`, nav.footerButton))
 let list = firstFoot.querySelectorAll('li');
-list[0].firstChild.href ="questionList.html";
-list[0].firstChild.innerHTML ="Questions";
-list[1].firstChild.href ="privacy.html";
-list[1].firstChild.innerHTML ="Privacy Policy";
-list[2].firstChild.href ="services.html";
-list[2].firstChild.innerHTML ="Terms of Service";
-list[3].firstChild.href ="cookie.html";
-list[3].firstChild.innerHTML ="Cookie Policy";
+list[0].firstChild.href ="privacy.html";
+list[0].firstChild.innerHTML ="Privacy Policy";
+list[1].firstChild.href ="services.html";
+list[1].firstChild.innerHTML ="Terms of Service";
+list[2].firstChild.href ="cookie.html";
+list[2].firstChild.innerHTML ="Cookie Policy";
 let secondFoot = footerDiv[1];
 secondFoot.appendChild(p);
 secondFoot.childNodes[0].innerHTML ="All Rights Reserved. &copy 2018. Made by CEA"

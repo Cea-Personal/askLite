@@ -2,6 +2,9 @@
 	composes:light from './background.css';
 }
 
+html,body{
+	height:100%;
+}
 .body{
     box-sizing:border-box;
     margin:0;
@@ -48,7 +51,35 @@
 }
 .fix{
 	clear:both;
-	height: 30px;;
+	height: 30px;
+}
+
+.leftbar{
+	width:25%;
+	float:left;
+	padding:1px 0;
+	height:100%;
+}
+.leftbarUp{
+	min-height:25vh;
+	background-color: #ef7c0b
+}
+.leftbarDown{
+	min-height:52.5vh;
+	background-color: #6d2f1f;
+	clear:both;
+}
+.block{
+	display:block;
+	margin:3%;
+}
+.none{
+	display:none
+}
+.sublevel{
+	width:95%;
+	composes:block;
+	padding:1% 1% 2%;
 }
 .medium{
 	@media screen and (min-width:480px) {

@@ -40,10 +40,11 @@ welcomeDiv.style.width = "30%";
 welcomeDiv.appendChild(createMultiple('h2',text.h2)).innerHTML ="Ask, Answer , Assist"
 welcomeDiv.appendChild(createMultiple("p",text.welcome)).innerHTML ="Ask beginner questions, get simple answers, assist others to gain knowledge, ask lite. "
 welcomeDiv.appendChild(createMultiple("p",text.welcome)).innerHTML ="Join the beginners community today."
-welcomeDiv.appendChild(createMultiple('button',button.rounded)).innerHTML =" About us"
-welcomeDiv.appendChild(createMultiple('button',`wow ${animate.flash} ${button.rounded} ${animate.infinite}`)).innerHTML =" Join Now"
+
+
 
 let main = document.getElementsByClassName(layout.main);
+main[0].style.borderTop = "none"
 main[0].appendChild(createMultiple('div',layout.tabs));
 main[0].appendChild(createMultiple('div',layout.tabs));
 main[0].appendChild(createMultiple('div',layout.fix));

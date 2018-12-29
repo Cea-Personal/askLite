@@ -18,7 +18,7 @@ eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"primary\":\"b
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"common\":\"button__common___2GkF color__white___2a3j\",\"rounded\":\"button__rounded___3kSo button__common___2GkF color__white___2a3j\",\"basic\":\"button__basic___eVat button__common___2GkF color__white___2a3j color__body___212d\",\"login\":\"button__login___LYeM button__common___2GkF color__white___2a3j color__white___2a3j\",\"active\":\"button__active___26Dm background__primary___2U_W\",\"error\":\"button__error___LqtT button__common___2GkF color__white___2a3j background__danger___a0Wk\",\"success\":\"button__success___1sLX button__rounded___3kSo button__common___2GkF color__white___2a3j background__success___3wTf\",\"disabled\":\"button__disabled___LCr9 button__rounded___3kSo button__common___2GkF color__white___2a3j undefined\",\"fullLength\":\"button__fullLength___1iNT button__rounded___3kSo button__common___2GkF color__white___2a3j\"};\n\n//# sourceURL=webpack:///./src/UI/components/button.css?");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"common\":\"button__common___2GkF color__white___2a3j\",\"rounded\":\"button__rounded___3kSo button__common___2GkF color__white___2a3j\",\"basic\":\"button__basic___eVat button__common___2GkF color__white___2a3j color__body___212d\",\"login\":\"button__login___LYeM button__common___2GkF color__white___2a3j color__white___2a3j\",\"active\":\"button__active___26Dm background__primary___2U_W\",\"error\":\"button__error___LqtT button__common___2GkF color__white___2a3j background__danger___a0Wk\",\"success\":\"button__success___1sLX button__rounded___3kSo button__common___2GkF color__white___2a3j background__success___3wTf\",\"disabled\":\"button__disabled___LCr9 button__rounded___3kSo button__common___2GkF color__white___2a3j undefined\",\"fullLength\":\"button__fullLength___1iNT button__rounded___3kSo button__common___2GkF color__white___2a3j\",\"search\":\"button__search___MkR0 button__rounded___3kSo button__common___2GkF color__white___2a3j\",\"underline\":\"button__underline___16KJ\",\"underlineActive\":\"button__underlineActive___25Uw button__underline___16KJ\",\"profile\":\"button__profile___2aFa\",\"profileActive\":\"button__profileActive___rKJr\"};\n\n//# sourceURL=webpack:///./src/UI/components/button.css?");
 
 /***/ }),
 
@@ -29,7 +29,7 @@ eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"common\":\"bu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"questionCard\":\"card__questionCard___Q9E6 background__white___ozXC\",\"questionTop\":\"card__questionTop___1aIt card__questionCard___Q9E6 background__white___ozXC\",\"questionBottom\":\"card__questionBottom___2-O4 card__questionCard___Q9E6 background__white___ozXC\",\"sidebarCard\":\"card__sidebarCard___y0pI card__questionCard___Q9E6 background__white___ozXC\",\"answerCard\":\"card__answerCard___1zDQ card__questionCard___Q9E6 background__white___ozXC background__light___3ypr\",\"loginCard\":\"card__loginCard___2op6 card__questionCard___Q9E6 background__white___ozXC\"};\n\n//# sourceURL=webpack:///./src/UI/components/card.css?");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"questionCard\":\"card__questionCard___Q9E6 background__white___ozXC\",\"questionTop\":\"card__questionTop___1aIt card__questionCard___Q9E6 background__white___ozXC\",\"questionBottom\":\"card__questionBottom___2-O4 card__questionCard___Q9E6 background__white___ozXC\",\"sidebarCard\":\"card__sidebarCard___y0pI card__questionCard___Q9E6 background__white___ozXC\",\"answerCard\":\"card__answerCard___1zDQ card__questionCard___Q9E6 background__white___ozXC background__light___3ypr\",\"loginCard\":\"card__loginCard___2op6 card__questionCard___Q9E6 background__white___ozXC\",\"profileCard\":\"card__profileCard___cmfQ card__questionCard___Q9E6 background__white___ozXC\"};\n\n//# sourceURL=webpack:///./src/UI/components/card.css?");
 
 /***/ }),
 
@@ -51,7 +51,7 @@ eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"primary\":\"c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"common\":\"layouts__common___2GKn background__light___3ypr\",\"body\":\"layouts__body___25Ay text__text___kqqi\",\"main\":\"layouts__main___J9ZF\",\"navBar\":\"layouts__navBar___30y_ layouts__common___2GKn background__light___3ypr\",\"section\":\"layouts__section___1cBQ layouts__common___2GKn background__light___3ypr\",\"footer\":\"layouts__footer___1Y6I background__top___1TDJ text__shadowed___2kLX color__light___2OcO\",\"trademark\":\"layouts__trademark___1JEg\",\"foot\":\"layouts__foot___2ZIk\",\"tabs\":\"layouts__tabs___B4SJ\",\"question\":\"layouts__question___1pbA\",\"fix\":\"layouts__fix___33kV\",\"medium\":\"layouts__medium___1ye8\",\"large\":\"layouts__large___142H\"};\n\n//# sourceURL=webpack:///./src/UI/components/layouts.css?");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"common\":\"layouts__common___2GKn background__light___3ypr\",\"body\":\"layouts__body___25Ay text__text___kqqi\",\"main\":\"layouts__main___J9ZF\",\"navBar\":\"layouts__navBar___30y_ layouts__common___2GKn background__light___3ypr\",\"section\":\"layouts__section___1cBQ layouts__common___2GKn background__light___3ypr\",\"footer\":\"layouts__footer___1Y6I background__top___1TDJ text__shadowed___2kLX color__light___2OcO\",\"trademark\":\"layouts__trademark___1JEg\",\"foot\":\"layouts__foot___2ZIk\",\"tabs\":\"layouts__tabs___B4SJ\",\"question\":\"layouts__question___1pbA\",\"fix\":\"layouts__fix___33kV\",\"leftbar\":\"layouts__leftbar___1VUH\",\"leftbarUp\":\"layouts__leftbarUp___mFqM\",\"leftbarDown\":\"layouts__leftbarDown___1lPN\",\"block\":\"layouts__block___3WEX\",\"none\":\"layouts__none___V-8T\",\"sublevel\":\"layouts__sublevel___Yn4F layouts__block___3WEX\",\"medium\":\"layouts__medium___1ye8\",\"large\":\"layouts__large___142H\"};\n\n//# sourceURL=webpack:///./src/UI/components/layouts.css?");
 
 /***/ }),
 
@@ -62,7 +62,7 @@ eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"common\":\"la
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"tabs\":\"nav__tabs___9pf-\",\"horizontal\":\"nav__horizontal___vQzC\",\"menuButton\":\"nav__menuButton___2YHc color__body___212d\",\"active\":\"nav__active___1R_k background__primary___2U_W\",\"headButton\":\"nav__headButton___11SK color__white___2a3j\",\"topMenu\":\"nav__topMenu___1VvR nav__tabs___9pf-\",\"footerButton\":\"nav__footerButton___b2Wr color__light___2OcO\",\"icon\":\"nav__icon___27pN\",\"vertical\":\"nav__vertical___24pQ\"};\n\n//# sourceURL=webpack:///./src/UI/components/nav.css?");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"tabs\":\"nav__tabs___9pf-\",\"horizontal\":\"nav__horizontal___vQzC\",\"menuButton\":\"nav__menuButton___2YHc color__body___212d\",\"active\":\"nav__active___1R_k background__primary___2U_W\",\"headButton\":\"nav__headButton___11SK color__white___2a3j\",\"topMenu\":\"nav__topMenu___1VvR nav__tabs___9pf-\",\"footerButton\":\"nav__footerButton___b2Wr color__light___2OcO\",\"footer\":\"nav__footer___1uVq nav__tabs___9pf-\",\"icon\":\"nav__icon___27pN\",\"vertical\":\"nav__vertical___24pQ\"};\n\n//# sourceURL=webpack:///./src/UI/components/nav.css?");
 
 /***/ }),
 
@@ -73,7 +73,7 @@ eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"tabs\":\"nav_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"banner\":\"others__banner___3Noe\",\"accordion\":\"others__accordion___2abO\"};\n\n//# sourceURL=webpack:///./src/UI/components/others.css?");
+eval("// extracted by mini-css-extract-plugin\nmodule.exports = {\"banner\":\"others__banner___3Noe\",\"accordion\":\"others__accordion___2abO\",\"searchmenu\":\"others__searchmenu___y8Ui\",\"searchform\":\"others__searchform___3ju3\",\"sideSearch\":\"others__sideSearch___3Gm-\"};\n\n//# sourceURL=webpack:///./src/UI/components/others.css?");
 
 /***/ }),
 

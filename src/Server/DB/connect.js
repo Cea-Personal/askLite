@@ -1,8 +1,19 @@
 import pg from 'pg'
 import dotenv from 'dotenv';
 import redis from 'redis';
+import {execFile} from 'child_process'
+
+
 
 dotenv.config();
+
+execFile('redis/redis-server.exe',(error,stdout)=>{
+  if(error){
+    throw error
+  }
+  console.log(stdout)
+})
+
 
 const client = new pg.Client({
   connectionString:process.env.postgresURL

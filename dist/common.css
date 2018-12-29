@@ -1,18 +1,3 @@
-.others__banner___3Noe{
-    background-image:url(images/banner.gif);
-    background-size:95vw 500px;
-    outline:none;
-    background-repeat:repeat-x;
-    border-bottom: 7vh solid gainsboro;
-}
-.others__accordion___2abO{
-
-}
-
-
-
-
- 
 .background__primary___2U_W{
     background-color:#ef7c0b
 }
@@ -114,6 +99,44 @@
 .text__centered___38i3{
     text-align:center
 }
+.others__banner___3Noe{
+    background-image:url(images/banner.gif);
+    background-size:95vw 500px;
+    outline:none;
+    background-repeat:repeat-x;
+    border-bottom: 7vh solid gainsboro;
+}
+.others__accordion___2abO{
+
+}
+.others__searchmenu___y8Ui{
+    padding-top:0.5%;
+    display:inline-block;
+    margin:0;
+    width:50%;
+    
+}
+.others__searchform___3ju3{
+    width: 70%;
+    padding:0 5px 5px;
+    margin-right:0;
+    height:20px;
+    background-color:inherit;
+    border:none;
+    
+}
+.others__sideSearch___3Gm-{
+    padding:5% 2%;
+    width:70%;
+    font-size:14px;
+}
+
+
+
+
+
+
+ 
 @-webkit-keyframes transition__flash___3I_v {
   from,
   50%,
@@ -544,6 +567,7 @@
     list-style-type: none;
     padding:0;
     margin:0;
+    float:right;
 
 }
 a{
@@ -590,7 +614,7 @@ a{
 
 }
 .nav__footerButton___b2Wr{
-    display:block;
+    display:inline-block;
     text-decoration:none;
     float:left;
     padding:1vh 2vw;
@@ -599,7 +623,9 @@ a{
     color:#ef7c0b;
 
 }
-
+.nav__footer___1uVq{
+    float:none;
+}
 .nav__icon___27pN{
     display:none;
 }
@@ -621,6 +647,44 @@ a{
     }
     
   }
+.color__primary___3Cu0{
+    color:#ef7c0b
+}
+.color__secondary___MFHG{
+    color:blue
+}
+.color__success___l4XX{
+    color:green;
+}
+.color__danger___1Mqq{
+    color:red;
+}
+.color__muted___10i3{
+    color:grey;
+}
+.color__info___3IJC{
+    color:lightseagreen
+}
+.color__white___2a3j{
+    color:white
+}
+.color__dark___20Wb{
+    color:darkgray
+
+}
+.color__body___212d{
+    color:black;
+
+}
+.color__light___2OcO{
+    color:lightgrey;
+}
+.color__warning___1v9o{
+    color:lightsalmon;
+}
+.color__top___3wWq{
+    color:#6d2f1f
+}
 .card__questionCard___Q9E6{
     height:initial;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -670,6 +734,96 @@ a{
     width:70%;
     margin:2% 15%;
     padding:0vw 0vw;
+}
+.card__profileCard___cmfQ{
+    min-height:100%;
+}
+.layouts__common___2GKn{
+}
+
+html,body{
+	height:100%;
+}
+.layouts__body___25Ay{
+    box-sizing:border-box;
+    margin:0;
+	padding:0;
+}
+.layouts__main___J9ZF{
+	background-color:inherit;
+	border-top:2px solid #ef7c0b;
+	height:100%;
+	min-height:80%;
+	margin-left: 8.2%;
+	margin-right:8.8%;
+}
+.layouts__navBar___30y_{
+	height:8vh;
+	border-bottom:2vh solid gainsboro;
+}
+.layouts__section___1cBQ{
+	margin-top:0;
+
+}
+.layouts__footer___1Y6I{
+	padding:1% 7.6%;
+	height:10vh;
+}
+.layouts__trademark___1JEg{
+	float:right;
+}
+
+.layouts__foot___2ZIk{
+	width:100vw;
+}
+.layouts__tabs___B4SJ{
+	padding-bottom:0.1%;
+}
+.layouts__question___1pbA{
+	border-bottom:2px inset #ef7c0b
+}
+.layouts__fix___33kV{
+	clear:both;
+	height: 30px;
+}
+
+.layouts__leftbar___1VUH{
+	width:25%;
+	float:left;
+	padding:1px 0;
+	height:100%;
+}
+.layouts__leftbarUp___mFqM{
+	min-height:25vh;
+	background-color: #ef7c0b
+}
+.layouts__leftbarDown___1lPN{
+	min-height:52.5vh;
+	background-color: #6d2f1f;
+	clear:both;
+}
+.layouts__block___3WEX{
+	display:block;
+	margin:3%;
+}
+.layouts__none___V-8T{
+	display:none
+}
+.layouts__sublevel___Yn4F{
+	width:95%;
+	padding:1% 1% 2%;
+}
+.layouts__medium___1ye8{
+	@media screen and (min-width:480px) {
+
+	}
+}
+
+.layouts__large___142H{
+	@media screen {
+
+	}
+
 }
 .button__common___2GkF{
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -738,98 +892,51 @@ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     float: left;
 
 }
-.color__primary___3Cu0{
-    color:#ef7c0b
+.button__search___MkR0{
+    background-color:#ef7c0b;
+    font-size:12px;
+    width:20%;
+    outline:none;
+    border:none;
 }
-.color__secondary___MFHG{
-    color:blue
+.button__underline___16KJ {
+    margin:1%;
+    width:5%;
+    float:right;
+    background-color :inherit;
+    border:none;
+    padding:5px;
+    outline:none;
+    font-size:14px;
 }
-.color__success___l4XX{
-    color:green;
+.button__underlineActive___25Uw{
+    float:right;
+    border-bottom:2px solid #ef7c0b;
+    color:#ef7c0b;
 }
-.color__danger___1Mqq{
-    color:red;
+.button__underline___16KJ:hover{
+    border-bottom:2px solid #ef7c0b;
+    color:#ef7c0b;
 }
-.color__muted___10i3{
-    color:grey;
-}
-.color__info___3IJC{
-    color:lightseagreen
-}
-.color__white___2a3j{
-    color:white
-}
-.color__dark___20Wb{
-    color:darkgray
-
-}
-.color__body___212d{
-    color:black;
-
-}
-.color__light___2OcO{
-    color:lightgrey;
-}
-.color__warning___1v9o{
-    color:lightsalmon;
-}
-.color__top___3wWq{
-    color:#6d2f1f
-}
-.layouts__common___2GKn{
-}
-
-.layouts__body___25Ay{
-    box-sizing:border-box;
+.button__profile___2aFa{
     margin:0;
-	padding:0;
+    width:10%;
+    background-color :inherit;
+    border:none;
+    padding:5px;
+    outline:none;
+    font-size:14px;
+    border-bottom:2px solid grey;
 }
-.layouts__main___J9ZF{
-	background-color:inherit;
-	border-top:2px solid #ef7c0b;
-	height:100%;
-	min-height:80%;
-	margin-left: 8.2%;
-	margin-right:8.8%;
-}
-.layouts__navBar___30y_{
-	height:8vh;
-	border-bottom:2vh solid gainsboro;
-}
-.layouts__section___1cBQ{
-	margin-top:0;
+.button__profileActive___rKJr{
+    width:10%;
+    margin:0;
+    outline:none;
+    padding:5px 0 5px;
+    background-color :inherit;
+    border: 1px solid grey;
+    border-top:2px solid #ef7c0b;
+    border-bottom:none;
+    color:#ef7c0b;}
 
-}
-.layouts__footer___1Y6I{
-	padding:1% 7.6%;
-	height:10vh;
-}
-.layouts__trademark___1JEg{
-	float:right;
-}
 
-.layouts__foot___2ZIk{
-	width:100vw;
-}
-.layouts__tabs___B4SJ{
-	padding-bottom:0.1%;
-}
-.layouts__question___1pbA{
-	border-bottom:2px inset #ef7c0b
-}
-.layouts__fix___33kV{
-	clear:both;
-	height: 30px;;
-}
-.layouts__medium___1ye8{
-	@media screen and (min-width:480px) {
-
-	}
-}
-
-.layouts__large___142H{
-	@media screen {
-
-	}
-
-}

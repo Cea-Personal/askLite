@@ -10,8 +10,8 @@ import Auth from './DB/auth/auth';
 const Controller = dbController || dsController
 const router = express.Router();
 //admin routes
-router.get('/users',Auth.checkToken,Controller.getAllUsers);
-router.put('/users/:userId/makeadmin',Auth.checkToken,Controller.makeAdmin)
+router.get('/admin/users/all',Auth.checkToken,Controller.getAllUsers);
+router.put('/admin/:userId/makeadmin',Auth.checkToken,Controller.makeAdmin)
 
 // user routes
 router.post('/users/signup',Controller.createUser);
@@ -22,11 +22,12 @@ router.delete('/users/:userId',Auth.checkToken , Controller.deleteUser);
 
 
 // general view routes
-router.get('/questions/all', Controller.getQuestions);
-router.get('/questions', Controller.getQuestionsByFilter);
+router.get('/questions', Controller.getQuestions);
+router.get('/questions/filter', Controller.getQuestionsByFilter);
+router.get('/questions/search',Controller.search)
 router.get('/questions/:questionId', Controller.getQuestion);
 // user view routes for questions
-router.post('/question', Auth.checkToken , Controller.postQuestion);
+router.post('/questions', Auth.checkToken , Controller.postQuestion);
 router.get('/questions/me/all',Auth.checkToken , Controller.getQuestionsByUser);
 //router.get('/questions/me/:questionId',Auth.checkToken , Controller.getQuestionByUser);
 router.delete('/questions/:questionId', Auth.checkToken, Controller.deleteQuestion);

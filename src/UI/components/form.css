@@ -3,6 +3,7 @@ form{
     width:60%;
     margin:0%
 }
+
 input{
     margin:2%;
     padding:2%;
@@ -24,3 +25,9 @@ input[type=submit]:hover{
     background-color:#ef7c0b;
     color:white;
 }
+input[type=search]{
+    background-color: inherit;
+    border:none;
+    border-bottom:1px solid grey;
+}
+
