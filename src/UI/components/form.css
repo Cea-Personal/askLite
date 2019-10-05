@@ -1,0 +1,33 @@
+form{
+    padding:10% 18%;
+    width:60%;
+    margin:0%
+}
+
+input{
+    margin:2%;
+    padding:2%;
+    width:100%; 
+    outline:none;
+    border:1px solid gainsboro;
+    
+}
+input:hover{
+    border:none;
+    border-bottom:1px solid #ef7c0b
+}
+input[type=submit]
+{
+ margin:3% 14%;
+ width: 80%;
+}
+input[type=submit]:hover{
+    background-color:#ef7c0b;
+    color:white;
+}
+input[type=search]{
+    background-color: inherit;
+    border:none;
+    border-bottom:1px solid grey;
+}
+

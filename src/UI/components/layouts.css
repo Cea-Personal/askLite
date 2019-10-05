@@ -1,0 +1,95 @@
+.common{
+	composes:light from './background.css';
+}
+
+html,body{
+	height:100%;
+}
+.body{
+    box-sizing:border-box;
+    margin:0;
+	padding:0;
+	composes: text from './text.css';
+}
+.main{
+	background-color:inherit;
+	border-top:2px solid #ef7c0b;
+	height:100%;
+	min-height:80%;
+	margin-left: 8.2%;
+	margin-right:8.8%;
+}
+.navBar{
+	composes:common;
+	height:8vh;
+	border-bottom:2vh solid gainsboro;
+}
+.section{
+	composes:common;
+	margin-top:0;
+
+}
+.footer{
+	composes: top from './background.css';
+	composes: shadowed from "./text.css";
+    composes:light from './color.css';
+	padding:1% 7.6%;
+	height:10vh;
+}
+.trademark{
+	float:right;
+}
+
+.foot{
+	width:100vw;
+}
+.tabs{
+	padding-bottom:0.1%;
+}
+.question{
+	border-bottom:2px inset #ef7c0b
+}
+.fix{
+	clear:both;
+	height: 30px;
+}
+
+.leftbar{
+	width:25%;
+	float:left;
+	padding:1px 0;
+	height:100%;
+}
+.leftbarUp{
+	min-height:25vh;
+	background-color: #ef7c0b
+}
+.leftbarDown{
+	min-height:52.5vh;
+	background-color: #6d2f1f;
+	clear:both;
+}
+.block{
+	display:block;
+	margin:3%;
+}
+.none{
+	display:none
+}
+.sublevel{
+	width:95%;
+	composes:block;
+	padding:1% 1% 2%;
+}
+.medium{
+	@media screen and (min-width:480px) {
+
+	}
+}
+
+.large{
+	@media screen {
+
+	}
+
+}

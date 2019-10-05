@@ -1,0 +1,39 @@
+.primary{
+    background-color:#ef7c0b
+}
+.secondary{
+    background-color:blue
+}
+.success{
+    background-color:green;
+}
+.danger{
+    background-color:red;
+}
+.muted{
+    background-color:grey;
+}
+.info{
+    background-color:lightseagreen;
+}
+.white{
+    background-color:white;
+}
+.dark{
+    background-color:darkgray;
+
+}
+.body{
+    background-color:black;
+
+}
+.light{
+    background-color:gainsboro;
+}
+.warning{
+    background-color:lightsalmon;
+}
+.top{
+    background-color:#6d2f1f ;
+    height:35px;
+}

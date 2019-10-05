@@ -1,0 +1,38 @@
+.banner{
+    background-image:url("../images/banner.gif") ;
+    background-size:95vw 500px;
+    outline:none;
+    background-repeat:repeat-x;
+    border-bottom: 7vh solid gainsboro;
+}
+.accordion{
+
+}
+.searchmenu{
+    padding-top:0.5%;
+    display:inline-block;
+    margin:0;
+    width:50%;
+    
+}
+.searchform{
+    width: 70%;
+    padding:0 5px 5px;
+    margin-right:0;
+    height:20px;
+    background-color:inherit;
+    border:none;
+    
+}
+.sideSearch{
+    padding:5% 2%;
+    width:70%;
+    font-size:14px;
+}
+
+
+
+
+
+
+ 
